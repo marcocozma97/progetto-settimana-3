@@ -1,61 +1,118 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week Project — Settimana III</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week Project — Settimana III</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-  <header>
-    <!-- Titolo dell'app + sottotitolo + button tema chiaro/scuro -->
-     <div class="titolo">
-        <h1>La mia Mangashelf</h1>
-        <p>Aggiungi i manga che hai letto o che vorresti leggere.</p>
-     </div>
-     <!-- Button che verrà poi gestito in JS per passare da un tema all'altro-->
-     <button id="btn-tema" class="btn-theme">Tema Scuro</button>
-  </header>
-
-  <main>
-
-    <section class="form">
-      <!-- Form di inserimento di nuovi elementi -->
-      <div class="titolo-form">
-        <h3>Aggiungi un manga</h3>
-      </div>
-      <div class="form-completo">
-        <div class="compilazione-form">
-            <!--Qui dentro ci sono gli input text, number e il select (Letto/Da Leggere) -->
+    <header>
+        <!-- Titolo dell'app + sottotitolo + button tema chiaro/scuro -->
+        <div class="titolo">
+            <h1>La mia Mangashelf</h1>
+            <p>Aggiungi i manga che hai letto o che vorresti leggere.</p>
         </div>
-        <div class="aggiungi-form">
-            <!--Button Aggiungi a capo con un hover appena ci puntiamo sopra (bg più scuro)-->
+        <!-- Button che verrà poi gestito in JS per passare da un tema all'altro-->
+        <button id="btn-tema" class="btn-theme">Tema Scuro</button>
+    </header>
+
+    <main>
+
+        <section class="form">
+            <!-- Form di inserimento di nuovi elementi -->
+            <div class="titolo-form">
+                <h3>Aggiungi un manga</h3>
+            </div>
+            <form class="form-completo">
+                <div class="compilazione-form">
+                    <!--Qui dentro ci sono gli input text, number -->
+                    <input type="text" id="titolo" placeholder=" Titolo" />
+                    <input type="text" id="autore" placeholder=" Autore" />
+                    <input type="number" id="anno" placeholder=" Anno" />
+                    <!-- Qui invece ci va il select (Letto/Da Leggere) -->
+                    <select id="selezione-stato">
+                        <option value="da-leggere"> Da Leggere</option>
+                        <option value="letto"> Letto</option>
+                    </select>
+                </div>
+                <div class="aggiungi-form">
+                    <!--Button Aggiungi a capo con un hover appena ci puntiamo sopra (bg più scuro)-->
+                    <button id="aggiungi-btn">Aggiungi</button>
+                </div>
+            </form>
+
+        </section>
+
+        <section class="controlli">
+            <!-- Ricerca live, filtro (select), ordinamento -->
+            <div class="riga-controlli">
+
+                <input type="text" id="ricerca-input" placeholder=" Cerca per titolo o autore..." />
+
+                <select id="filtro-stato">
+                    <option value="tutti"> Tutti</option>
+                    <option value="da-leggere"> Da Leggere</option>
+                    <option value="letto"> Letto</option>
+                </select>
+
+                <select id="ordine-manga">
+                    <option value="anno-crescente"> Anno crescente</option>
+                    <option value="anno-decrescente"> Anno decrescente</option>
+                    <option value="az"> Dalla A alla Z</option>
+                    <option value="za"> Dalla Z alla A</option>
+                </select>
+
+            </div>
+        </section>
+
+        <section class="statistiche">
+            <!-- Conteggi e/o barre orizzontali -->
+    
+    <div class="gruppo-numeri">
+        <div class="stat-box">
+            <span id="stat-totale" class="stat-numero">0</span>
+            <span class="stat-etichetta">totale</span>
         </div>
-      </div>
-      
-    </section>
+        <div class="stat-box">
+            <span id="stat-letti" class="stat-numero">0</span>
+            <span class="stat-etichetta">letti</span>
+        </div>
+        <div class="stat-box">
+            <span id="stat-da-leggere" class="stat-numero">0</span>
+            <span class="stat-etichetta">da leggere</span>
+        </div>
+    </div>
 
-    <section class="controlli">
-      <!-- Ricerca live, filtro (select), ordinamento -->
-    </section>
+    <div class="gruppo-progresso">
+        <div class="barra-sfondo">
+            <div id="barra-avanzamento"></div>
+        </div>
+        <div class="testo-barra">
+           <span id="percentuale-testo">Percentuali letti </span>
+        </div>
+    </div>
 
-    <section class="statistiche">
-      <!-- Conteggi e/o barre orizzontali -->
-    </section>
+</section>
 
-    <section class="lista">
-      <!-- Container che render() ricostruisce a ogni cambio di stato -->
-    </section>
+        <section class="lista">
+            <!-- Container che render() ricostruisce a ogni cambio di stato -->
+             <div id="lista-manga"></div>
+        </section>
 
-    <div id="notifica"></div>
+        <div id="notifica" class="notifica"></div>
 
-  </main>
+    </main>
 
-  <footer>
-    <!-- Autore, anno -->
-  </footer>
+    <footer>
+        <!-- Autore, anno -->
+         <p>Mangashelf -  Marco Cozma  2026</p>
+    </footer>
 
-  <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

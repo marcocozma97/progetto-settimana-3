@@ -34,39 +34,330 @@ button {
   display: none;
 }
 
-/* Scrivi qui sotto i tuoi stili */
-
 /* Header */
-
 header {
-    background-color: #1A1A1A;
-    width: 100%;
-    min-height: 110px;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 0 90px; 
+  background-color: #1A1A1A;
+  width: 100%;
+  min-height: 110px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 90px; 
 }
 
 .titolo {
-    text-align: left;
+  text-align: left;
 }
 
 h1 {
-   color: white;
-   font-size: 25px;
-   font-weight: bold;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .titolo p {
-    color: #C4C4C0;
-    font-size: 16px;
+  color: #C4C4C0;
+  font-size: 16px;
 }
 
 .btn-theme {
-    color: white;
-    border: 1px solid white;
-    padding: 8px 16px;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+/* DIV 1 - Aggiungi un manga */
+.form {
+  background-color: #ffffff;     
+  width: 80%;             
+  margin: 30px auto;    
+  border-radius: 10px;  
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+}
+
+.titolo-form {
+  margin-bottom: 10px;
+}
+
+.aggiungi-form {
+  margin-bottom: 10px;
+}
+
+.compilazione-form input, 
+.compilazione-form select,
+#aggiungi-btn {
+  box-sizing: border-box;
+}
+
+.compilazione-form {
+  width: 100%;        
+  margin-bottom: 20px; 
+}
+
+.compilazione-form input, 
+.compilazione-form select {
+  display: inline-block;
+  vertical-align: middle;
+  width: 23.5%;           
+  margin-right: 1.5%;     
+  padding: 12px;    
+  border: 1px solid #D1D1D6; 
+  border-radius: 6px;  
+  font-size: 15px;
+}
+
+.compilazione-form select {
+  margin-right: 0;
+}
+
+#aggiungi-btn {                                                                 
+  display: inline-block;
+  background-color: #D4A017; 
+  color: #000000;            
+  border: none;              
+  padding: 12px 40px;        
+  border-radius: 6px;        
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#aggiungi-btn:hover {
+  background-color: #ac8012;
+}
+
+/* DIV 2 - Ricerca live, filtro, ordinamento */
+.controlli {
+  background-color: #ffffff;
+  width: 80%;                
+  margin: 20px auto;         
+  border-radius: 10px;       
+  padding: 24px;             
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+  box-sizing: border-box;
+}
+
+.riga-controlli input, 
+.riga-controlli select {
+  box-sizing: border-box;    
+  display: inline-block;
+  vertical-align: middle;    
+  padding: 12px;             
+  border: 1px solid #D1D1D6; 
+  border-radius: 6px;        
+  font-size: 15px;
+}
+
+#ricerca-input {
+  width: 52%;
+  margin-right: 2%;
+}
+
+#filtro-stato {
+  width: 20%;
+  margin-right: 2%;
+}
+
+#ordine-manga {
+  width: 20%;
+  margin-right: 2%;
+}
+
+/* DIV 3 - Statistiche */
+.statistiche {
+  background-color: #ffffff;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+.gruppo-numeri {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+  margin-right: 5%;
+  text-align: left;
+}
+
+.gruppo-progresso {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 12px;
+  width: 75%;
+}
+
+.stat-box {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin-right: 3%;
+  text-align: center;
+}
+
+.stat-box:last-child {
+  margin-right: 0;
+}
+
+.stat-numero {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff9500;
+  line-height: 1.1;
+}
+
+.stat-etichetta {
+  display: block;
+  font-size: 11px;
+  color: #8e8e93;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.testo-barra {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3a3a3c;
+  margin-top: 6px;
+}
+
+.barra-sfondo {
+  width: 100%;
+  height: 10px;
+  background-color: #a6753e;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#barra-avanzamento {
+  background-color: #ff9500;
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+}
+
+/* Lista manga */
+.lista {
+  background-color: #ffffff;
+  width: 80%;
+  margin: 20px auto 40px auto;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  min-height: 150px;
+}
+
+#lista-manga {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Notifica */
+.notifica {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000000;
+  color: #e5e5ea;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: none;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+footer p {
+  font-size: 14px;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+/*  Style Elememti Aggiunti Con JS */
+
+.manga-card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 6px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Colori bordo */
+.manga-card.da-leggere { border-left-color: #d4a017; }
+.manga-card.letto { border-left-color: #24b24b; }
+
+/* Testo del manga */
+.manga-info strong {
+    font-size: 18px;
+    display: block;
+}
+
+.manga-info p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Contenitore bottoni */
+.manga-azioni {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+/* Stile base di TUTTI i bottoni */
+button, .btn-base {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
     border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Hover */
+button:hover {
+    background-color: #eee;
+}
+
+/* Badge (la scritta "Letto" o "Da leggere" dentro la riga) */
+.badge-stato {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+.badge-letto { 
+    background-color: #e2f7e6; 
+    color: #24b24b; 
+}
+
+.badge-da-leggere { 
+    background-color: #efece0; 
+    color: #a6753e; 
 }
 
