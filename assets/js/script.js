@@ -43,7 +43,7 @@ let stringaRicerca = "";
 
 function render() {
     let contenitore = document.getElementById("lista-manga");
-    contenitore.innerHTML = "";
+    contenitore.textContent = "";
 
     let filtrati = [];
     for (let i = 0; i < mangaShelf.length; i++) {
@@ -66,7 +66,7 @@ function render() {
         let badgeTesto = (manga.stato === "letto") ? "Letto" : "Da leggere";
         let div = document.createElement("div");
         div.className = "manga-card " + manga.stato;
-        div.innerHTML = "<div class='manga-info'><strong>" + manga.titolo + "</strong><p>" + manga.autore + " — " + manga.anno + "</p></div>" +
+        div.textContent = "<div class='manga-info'><strong>" + manga.titolo + "</strong><p>" + manga.autore + " — " + manga.anno + "</p></div>" +
             "<div class='manga-azioni'>" +
             "<span class='badge-stato " + badgeClasse + "'>" + badgeTesto + "</span>" +
             "<button onclick='cambiaStato(" + manga.id + ")'>" + (manga.stato === 'letto' ? 'Segna da leggere' : 'Segna letto') + "</button>" +
@@ -129,7 +129,7 @@ document.querySelector(".form-completo").onsubmit = function (e) {
 
 function notifica(testo) {
     let n = document.getElementById("notifica");
-    n.innerHTML = testo;
+    n.textContent = testo;
     n.style.display = "block";
     setTimeout(function () { n.style.display = "none"; }, 3000);
 }
@@ -212,7 +212,7 @@ document.getElementById("ordine-manga").onchange = function () {
 
 function notifica(testo) {
     let divNotifica = document.getElementById("notifica");
-    divNotifica.innerHTML = testo;
+    divNotifica.textContent = testo;
     divNotifica.style.display = "block";
     setTimeout(function () {
         divNotifica.style.display = "none";
