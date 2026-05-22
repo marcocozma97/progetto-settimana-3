@@ -9,7 +9,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color: #111;
-  background: #fff;
+  background: #F5F5F0;
 }
 
 img {
@@ -35,3 +35,38 @@ button {
 }
 
 /* Scrivi qui sotto i tuoi stili */
+
+/* Header */
+
+header {
+    background-color: #1A1A1A;
+    width: 100%;
+    min-height: 110px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 90px; 
+}
+
+.titolo {
+    text-align: left;
+}
+
+h1 {
+   color: white;
+   font-size: 25px;
+   font-weight: bold;
+}
+
+.titolo p {
+    color: #C4C4C0;
+    font-size: 16px;
+}
+
+.btn-theme {
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+

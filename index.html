@@ -4,18 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week Project — Settimana III</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
   <header>
     <!-- Titolo dell'app + sottotitolo + button tema chiaro/scuro -->
+     <div class="titolo">
+        <h1>La mia Mangashelf</h1>
+        <p>Aggiungi i manga che hai letto o che vorresti leggere.</p>
+     </div>
+     <!-- Button che verrà poi gestito in JS per passare da un tema all'altro-->
+     <button id="btn-tema" class="btn-theme">Tema Scuro</button>
   </header>
 
   <main>
 
     <section class="form">
       <!-- Form di inserimento di nuovi elementi -->
+      <div class="titolo-form">
+        <h3>Aggiungi un manga</h3>
+      </div>
+      <div class="form-completo">
+        <div class="compilazione-form">
+            <!--Qui dentro ci sono gli input text, number e il select (Letto/Da Leggere) -->
+        </div>
+        <div class="aggiungi-form">
+            <!--Button Aggiungi a capo con un hover appena ci puntiamo sopra (bg più scuro)-->
+        </div>
+      </div>
+      
     </section>
 
     <section class="controlli">
@@ -38,6 +56,6 @@
     <!-- Autore, anno -->
   </footer>
 
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

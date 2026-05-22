@@ -22,6 +22,40 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const manga = [
+    {
+        id: 1,
+        titolo: 'Naruto',
+        autore: 'Masashi Kishimoto',
+        anno: 1999,
+        stato: 'letto',
+    },
+    {
+        id: 2,
+        titolo: 'One Piece',
+        autore: 'Eiichiro Oda',
+        anno: 1997,
+        stato: 'da-leggere',
+    },
+    {
+        id: 3,
+        titolo: 'Bleach',
+        autore: 'Tite Kubo',
+        anno: 2001,
+        stato: 'letto',
+    },
+    {
+        id: 4,
+        titolo: 'Dragon Ball',
+        autore: 'Akira Toriyama',
+        anno: 1984,
+        stato: 'da-leggere',
+    }
+];
+let filtroCorrente = 'tutti';      
+let ordinamentoCorrente = 'titolo-az'; 
+let ricercaCorrente = '';
+
 
 /* RENDER()
    Una sola funzione che ridipinge la lista. A ogni chiamata:
@@ -99,16 +133,6 @@ REGOLE
 /* RIORDINO ↑ ↓
    Due button su ogni elemento. Click su ↑ scambia con il precedente nell'array,
    ↓ con il successivo. Event delegation. Poi render().
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
-
-/* ESPORTAZIONE / IMPORTAZIONE JSON (cerca tu su MDN)
-   - Esporta: crea un Blob con JSON.stringify(stato), genera un URL con
-     URL.createObjectURL e simula il click su un <a download>.
-   - Importa: <input type="file"> + FileReader per leggere il contenuto come
-     testo, JSON.parse, sostituisci lo stato, render().
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
